@@ -16,6 +16,14 @@ or
 ```
 , may also work.
 
-An application may require the user-supplied filename to start with the expected base folder, such as /var/www/images. In this case, it might be possible to include the required base folder followed by suitable traversal sequences. For example: filename=/var/www/images/../../../etc/passwd.
+An application may require the user-supplied filename to start with the expected base folder, such as **/var/www/images**. In this case, it might be possible to include the required base folder followed by suitable traversal sequences. For example: 
 
-An application may require the user-supplied filename to end with an expected file extension, such as .png. In this case, it might be possible to use a null byte to effectively terminate the file path before the required extension. For example: filename=../../../etc/passwd%00.png
+```
+filename=/var/www/images/../../../etc/passwd
+```
+
+An application may require the user-supplied filename to end with an expected file extension, such as .png. In this case, it might be possible to use a null byte to effectively terminate the file path before the required extension. For example: 
+
+```
+filename=../../../etc/passwd%00.png
+```
